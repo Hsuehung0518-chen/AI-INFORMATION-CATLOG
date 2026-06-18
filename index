@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+    <title>AI 資訊圖表風格 IDE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <h1>🎨 AI Style IDE</h1>
+            <p class="subtitle">資訊圖表風格提示工程百科</p>
+        </div>
+        <button id="settingsBtn" class="btn-icon" aria-label="偏好設定">⚙️ 設定</button>
+    </header>
+
+    <main id="bentoGrid" class="bento-grid">
+        </main>
+
+    <dialog id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>⚙️ 偏好設定</h2>
+            
+            <div class="setting-group">
+                <label for="themeSelect">UI 質感切換：</label>
+                <select id="themeSelect">
+                    <option value="dark">深色玻璃擬態 (Dark Glass)</option>
+                    <option value="light">極簡淺色 (Light Minimal)</option>
+                </select>
+            </div>
+
+            <div class="setting-group checkbox-group">
+                <input type="checkbox" id="seniorToggle">
+                <label for="seniorToggle">
+                    <strong>長輩友善模式</strong><br>
+                    <small>啟用超大字體、高對比色與加強按鈕提示</small>
+                </label>
+            </div>
+
+            <div class="modal-actions">
+                <button id="resetBtn" class="btn-secondary">重設</button>
+                <button id="applyBtn" class="btn-primary">套用預覽</button>
+                <button id="saveBtn" class="btn-accent">儲存設定</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
