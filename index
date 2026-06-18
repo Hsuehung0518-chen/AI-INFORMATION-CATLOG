@@ -12,15 +12,19 @@
             <h1>🎨 AI Style IDE</h1>
             <p class="subtitle">資訊圖表風格提示工程百科</p>
         </div>
-        <button id="settingsBtn" class="btn-icon" aria-label="偏好設定">⚙️ 設定</button>
+        <button id="settingsBtn" class="btn-icon" aria-label="偏好設定與資料管理">⚙️ 設定</button>
     </header>
+
+    <div class="search-container">
+        <input type="search" id="searchInput" placeholder="🔍 輸入風格名稱、關鍵字或 ID 搜尋..." aria-label="搜尋風格">
+    </div>
 
     <main id="bentoGrid" class="bento-grid">
         </main>
 
     <dialog id="settingsModal" class="modal">
         <div class="modal-content">
-            <h2>⚙️ 偏好設定</h2>
+            <h2>⚙️ 設定與管理</h2>
             
             <div class="setting-group">
                 <label for="themeSelect">UI 質感切換：</label>
@@ -38,8 +42,17 @@
                 </label>
             </div>
 
+            <div class="setting-group data-management">
+                <label>💾 資料備份與還原：</label>
+                <div class="data-actions">
+                    <button id="exportBtn" class="btn-outline">📤 匯出 JSON</button>
+                    <label for="importFile" id="importLabel" class="btn-outline" style="cursor:pointer; display:flex; align-items:center; justify-content:center; margin:0;">📥 匯入 JSON</label>
+                    <input type="file" id="importFile" accept=".json" style="display:none;">
+                </div>
+            </div>
+
             <div class="modal-actions">
-                <button id="resetBtn" class="btn-secondary">重設</button>
+                <button id="resetBtn" class="btn-secondary">重設 UI</button>
                 <button id="applyBtn" class="btn-primary">套用預覽</button>
                 <button id="saveBtn" class="btn-accent">儲存設定</button>
             </div>
